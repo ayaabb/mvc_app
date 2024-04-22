@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2024-04-01",
+    "item_sold": "Laptop",
+    "cost": 1200
+  },
+  {
+    "date": "2024-04-02",
+    "item_sold": "Smartphone",
+    "cost": 800
+  },
+  {
+    "date": "2024-04-03",
+    "item_sold": "Headphones",
+    "cost": 100
+  },
+  {
+    "date": "2024-04-04",
+    "item_sold": "Keyboard",
+    "cost": 50
+  },
+  {
+    "date": "2024-04-05",
+    "item_sold": "Monitor",
+    "cost": 300
+  },
+  {
+    "date": "2024-04-06",
+    "item_sold": "Tablet",
+    "cost": 500
+  },
+  {
+    "date": "2024-04-07",
+    "item_sold": "Printer",
+    "cost": 200
+  },
+  {
+    "date": "2024-04-08",
+    "item_sold": "Gaming Console",
+    "cost": 400
+  },
+  {
+    "date": "2024-04-09",
+    "item_sold": "Camera",
+    "cost": 700
+  },
+  {
+    "date": "2024-04-10",
+    "item_sold": "Smartwatch",
+    "cost": 250
+  }
+]
