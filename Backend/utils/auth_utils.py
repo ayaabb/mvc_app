@@ -1,5 +1,5 @@
 import bcrypt
-from Backend.FileHandler.read_from_file import get_data
+from models.FileHandler.read_from_file import get_data
 
 auth_users_path = "database/auth_users.json"
 
