@@ -2,7 +2,7 @@ from fastapi import APIRouter, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-from models.sales_model import get_sales_data
+from Backend.utils.sales_utils import get_sales_data
 
 router = APIRouter()
 
