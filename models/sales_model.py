@@ -1,4 +1,4 @@
-from Backend.FileHandler.read_from_file import get_data
+from models.FileHandler.read_from_file import get_data
 
 items_path = 'database/items.json'
 
