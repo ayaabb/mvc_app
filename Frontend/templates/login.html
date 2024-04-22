@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Placeholder for displaying error message -->
+    <div id="errorContainer"></div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Make a fetch request to the login endpoint
+            fetch('http://localhost:8000/login', { // Update the URL to point to your backend
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(errorData => {
+                        if (errorData.detail) {
+                            throw new Error(errorData.detail);
+                        } else {
+                            throw new Error(response.statusText);
+                        }
+                    });
+                }
+                // If login is successful, redirect to the sales page
+                window.location.href = 'http://localhost:8000/sales';
+            })
+            .catch(error => {
+                // Display the error message on the screen
+                const errorContainer = document.getElementById('errorContainer');
+                errorContainer.textContent = 'Error: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html>
